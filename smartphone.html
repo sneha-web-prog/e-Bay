@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart phones</title>
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./smartphone.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light  py-2">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <span class="mr-2">Hi!</span>
+            <a href="./signin.html" class="btn btn-link p-0">Sign in</a>
+            <span class="mx-1">or</span>
+            <a href="./register.html" class="btn btn-link p-0">Register</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Daily Deals</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Brand Outlet</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Help & Contact</a>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="topNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Watchlist</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">My eBay</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</nav>
+<hr>
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container-fluid">
+        <!-- Desktop Navbar -->
+        <div class="desktop-elements w-100 d-none d-lg-flex">
+            <a class="navbar-brand" href="#">
+                <img src="./asset/ebaylogo.png" alt="eBay Logo" style="max-width: 140px;">
+            </a>
+            
+            <div class="dropdown mx-3">
+                <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown">
+                    Shop by Category
+                </button>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Electronics</a>
+                    <a class="dropdown-item" href="#">Fashion</a>
+                    <a class="dropdown-item" href="#">Home & Garden</a>
+                    <a class="dropdown-item" href="#">Sports</a>
+                    <a class="dropdown-item" href="#">Toys</a>
+                </div>
+            </div>
+
+            <div class="desktop-search-container flex-grow-1">
+                <div class="input-group">
+                    <input type="text" id="searchbar" class="form-control  " placeholder="Search for anything">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            All Categories
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Electronics</a>
+                            <a class="dropdown-item" href="#">Fashion</a>
+                            <a class="dropdown-item" href="#">Home & Garden</a>
+                            <a class="dropdown-item" href="#">Sports</a>
+                            <a class="dropdown-item" href="#">Toys</a>
+                        </div>
+                    </div>
+                    <button id="search-btn" class="btn btn-primary w-25 ">Search</button>
+                    <a href="#" class="align-self-center mx-3">Advanced</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="mobile-search-container w-100 d-lg-none">
+            <a class="navbar-brand" href="#">
+                <img src="./asset/ebaylogo.png" alt="eBay Logo">
+            </a>
+            <input type="text" class="form-control" placeholder="Search">
+            <button class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+<section class="sec1" >
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar">
+                <h5 class="mb-3">Shop by Category</h5>
+                <div class="category-list">
+                    <h6 class="font-weight-bold">Electronics</h6>
+                    <a href="#" >Cell Phones & Accessories</a>
+                    <a href="#" >Cell Phone & Smartphone Parts</a>
+                    <a href="#" >Cell Phone Accessories</a>
+                    <a href="#" >Cell Phones & Smartphones</a>
+                    <a href="#" >Display Phones</a>
+                    <a href="#" >Mixed Lots</a>
+                    <a href="#" >PDA Accessories</a>
+                    <a href="#" >PDAs</a>
+                    <a href="#" >Phone Cards & SIM Cards</a>
+                    <a href="#" >Portable Audio & Headphones</a>
+                    <a href="#" >Smart Watch Accessories</a>
+                    <a href="#" >Smart Watches</a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <h2 class="mb-4">Shop by category</h2>
+                
+                <!-- First Row of Cards -->
+                <div class="row mb-4">
+                    <div class="col">
+                            <img src="./asset/phone1.png" class="card-img-top" alt="Cell Phones">
+                            <div class="card-body">
+                                <h5 class="card-title">Cell Phones & Smartphones</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone2.png" class="card-img-top" alt="Unlocked Smartphones">
+                            <div class="card-body">
+                                <h5 class="card-title">Unlocked Smartphones</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone3.png" class="card-img-top" alt="iPhone">
+                            <div class="card-body">
+                                <h5 class="card-title">iPhone</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone4.png" class="card-img-top" alt="Samsung Phones">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Cell Phones and Smartphones</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone5.png" class="card-img-top" alt="Prepaid Phones">
+                            <div class="card-body">
+                                <h5 class="card-title">Prepaid Cell Phones and Smartphones</h5>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Second Row of Cards -->
+                <div class="row mb-4">
+                    <div class="col">
+                            <img src="./asset/phone6.png" class="card-img-top" alt="Phone Cases">
+                            <div class="card-body">
+                                <h5 class="card-title">Phone Cases</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone7.png" class="card-img-top" alt="Smart Watches">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Watches</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone8.png" class="card-img-top" alt="Wireless Earbuds">
+                            <div class="card-body">
+                                <h5 class="card-title">Wireless Earbuds</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone9.png" class="card-img-top" alt="Wireless Chargers">
+                            <div class="card-body">
+                                <h5 class="card-title">Wireless Chargers</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/phone10.png" class="card-img-top" alt="Charging Cables">
+                            <div class="card-body ">
+                                <h5 class="card-title">Charging Cables</h5>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 ">
+            </div>
+            <div class="col-md-10 mt-5">
+                <h2 class="mb-4">Shop by Brand</h2>
+                <div class="row mb-4">
+                    <div class="col">
+                            <img src="./asset/iphone.png" class="card-img-top" alt="Cell Phones">
+                            <div class="card-body">
+                                <h5 class="card-title">Apple iphone</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/samsung.png" class="card-img-top" alt="Unlocked Smartphones">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/google.png" class="card-img-top" alt="iPhone">
+                            <div class="card-body">
+                                <h5 class="card-title">Google</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/LG.png" class="card-img-top" alt="Samsung Phones">
+                            <div class="card-body">
+                                <h5 class="card-title">LG</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/huawei.png" class="card-img-top" alt="Prepaid Phones">
+                            <div class="card-body">
+                                <h5 class="card-title">Huawei</h5>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Second Row of Cards -->
+                <div class="row">
+                    <div class="col">
+                            <img src="./asset/htc.png" class="card-img-top" alt="Phone Cases">
+                            <div class="card-body">
+                                <h5 class="card-title">HTC</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/oneplus.png" class="card-img-top" alt="Smart Watches">
+                            <div class="card-body">
+                                <h5 class="card-title">Oneplus</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/blackblerry.png" class="card-img-top" alt="Wireless Earbuds">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Berry</h5>
+                            </div>
+                    </div>
+                    <div class="col">
+                            <img src="./asset/motorala.png" class="card-img-top" alt="Wireless Chargers">
+                            <div class="card-body">
+                                <h5 class="card-title">Motoralla</h5>
+                            </div>
+                    </div>
+                    <div class="col ">
+                            <img src="./asset/nokia.png" class="card-img-top" alt="Charging Cables">
+                            <div class="card-body ">
+                                <h5 class="card-title">Nokia</h5>
+                            </div>
+                    </div>    
+                </div>
+    <hr >
+            </div>
+        </div>
+        
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 "></div>
+            <div class="col-md-10 mt-5">
+                <h2 class="mb-4">Limited Time Deals</h2>
+                <small>Free shipping</small>
+                <div class="tab-content" id="productTabsContent">
+                    <!-- Phones Tab -->
+                    <div class="tab-pane fade show active" id="phones" role="tabpanel">
+                        <div class="scroll-container">
+                            <div class="d-flex">
+                                <!-- Phone Products -->
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab1.png" class="product-image" alt="iPhone 13">
+                                        <h3 class="product-title">Google Pixel 8 Pro 128GB Factory Unlocked - Good</h3>
+                                        <div class="price">$314.99</div>
+                                        <div>
+                                            <span class="original-price">$899.99</span>
+                                            <span class="discount">| 37% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab2.png" class="product-image" alt="iPhone 13">
+                                        <h3 class="product-title">Apple AirPods Pro 2nd Generation Gen 2 2023 A2968 with Magsafe USB</h3>
+                                        <div class="price">$149.99</div>
+                                        <div>
+                                            <span class="original-price">$250.99</span>
+                                            <span class="discount">| 40% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab3.png" class="product-image" alt="iPhone">
+                                        <h3 class="product-title">Samsung Galaxy S22 128GB S901U Unlocked - Good</h3>
+                                        <div class="price">$209.99</div>
+                                        <div>
+                                            <span class="original-price">$799.99</span>
+                                            <span class="discount">| 74% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab4.png" class="product-image" alt="iPhone 13">
+                                        <h3 class="product-title">Apple iPhone 13 128GB Unlocked - Excellent</h3>
+                                        <div class="price">$322.99</div>
+                                        <div>
+                                            <span class="original-price">$699.99</span>
+                                            <span class="discount">| 54% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab5.png" class="product-image" alt="iPhone 13">
+                                        <h3 class="product-title">Samsung Galaxy S21 5G SM-G991U 128GB 256GB Unlocked Very Good</h3>
+                                        <div class="price">$166.99</div>
+                                        <div>
+                                            <span class="original-price">$1,199.99</span>
+                                            <span class="discount">| 86% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab6.png" class="product-image" alt="iPhone 13">
+                                        <h3 class="product-title">Apple iPhone 12 Pro 256GB Unlocked - Excellent
+                                        </h3>
+                                        <div class="price">$342.99</div>
+                                        <div>
+                                            <span class="original-price">$899.99</span>
+                                            <span class="discount">| 84% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab7.png" class="product-image" alt="iPhone 13">
+                                        <h3 class="product-title">Sony WF-1000XM5 Truly Wireless Bluetooth Noise Canceling Headphones</h3>
+                                        <div class="price">$149.99</div>
+                                        <div>
+                                            <span class="original-price">$1099.99</span>
+                                            <span class="discount">| 54% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="product-card">
+                                        <img src="./asset/tab8.png" class="product-image" alt="iPhone 13">
+                                        <h3 class="product-title">Samsung Galaxy S22 Ultra 128GB S908U Unlocked - Very Good
+                                        </h3>
+                                        <div class="price">$359.99</div>
+                                        <div>
+                                            <span class="original-price">$1,299.99</span>
+                                            <span class="discount">| 54% off</span>
+                                        </div>
+                                        <div class="refurbished-badge">eBay Refurbished</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 "></div>
+            <div class="col-md-10 mt-5">
+                <h2 class="mb-4">Limited Time Deals</h2>
+                <div class="tab-pane fade show active" id="phones" role="tabpanel">
+                    <div class="scroll-container">
+                        <div class="d-flex">
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-1.png" class="product1-image" alt="">
+                                    <a href="">Styluses for Apple iPad</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-2.png" class="product1-image" alt="">
+                                    <a href="">Cases, Covers & Keyboard Folios for Samsung Tablets &</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-3.png" class="product1-image" alt="">
+                                    <a href="">Stylus for Apple Phone</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-4.png" class="product1-image" alt="">
+                                    <a href="">Accessories for Samsung Tablets & eReaders</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-5.png" class="product1-image" alt="">
+                                    <a href="">Accessories for Samsung Tablets & eReaders</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-6.png" class="product1-image" alt="">
+                                    <a href="">Accessories for Amazon Tablets & eReaders</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-7.png" class="product1-image" alt="">
+                                    <a href="">Capacitive (Passive)s Styluses</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="card">
+                                    <img src="./asset/tab-8.png" class="product1-image" alt="">
+                                    <a href="">Capacitive (Passive) Cell Phone Styluses for Samsung</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-2 "></div>
+        <div class="col-xs-6 col-sm-6 col-md-2">
+                <div class="card-body p-4" style="background-color: rgb(147, 227, 147);height:350px;width:105%">
+                    <h5 class="card-title m-3">Tech for your trip under $30</h5>
+                    <p class="m-3">Stay connected with charging cords and more.</p>
+                    <button type="button" class="btn btn-dark m-3 p-2 w-50">Shop Now</button>
+                </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3">
+                <img  src="./asset/img-1.png" class="card-img-top" alt="Smart Watches" style="height:250px;width:105%">
+                <div class="card-body">
+                    <p>USB-C to USB-C Cable Male Type-C Cable Cord Fast Charger Charging Data Sync</p>
+                    <h5 class="card-title">$6.24</h5>
+                </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3">
+                <img src="./asset/img-2.png" class="card-img-top" alt="Wireless Earbuds" style="height:250px;width:100%">
+                <div class="card-body">
+                    <p>New Universal Car Mount Adjustable Gooseneck Cup Holder Cradle for Cell Phone US</p>
+                    <h5 class="card-title">$8.66</h5>
+                </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2">
+                <img src="./asset/img-3.png" class="card-img-top" alt="Wireless Chargers" style="height:250px;width:105%">
+                <div class="card-body">
+                    <p>360° Universal Mount Holder Car Stand Windshield For Mobile Cell Phone GPS</p>
+                    <h5 class="card-title">$4.98</h5>
+                </div>
+        </div>
+        <div class="col-md-2 "></div>
+        <div class="col-xs-6 col-sm-6 col-md-2">
+                <img src="./asset/img-4.png" class="card-img-top" alt="Charging Cables" style="height:250px;width:105%">
+                <div class="card-body ">
+                    <p>3-Pack Braided USB C Type-C Fast Charging Data SYNC Charger Cable Cord 3/6/10FT</p>
+                    <h5 class="card-title">$8.99</h5>
+                </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2">
+                <img src="./asset/img-5.png" class="card-img-top" alt="Charging Cables" style="height:250px;width:105%">
+                <div class="card-body ">
+                    <p>BlackBerry Wearable Seatbelt Bluetooth Stereo Speaker & Bluetooth Transmitter</p>
+                    <h5 class="card-title">$9.99</h5>
+                </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2">
+                <img src="./asset/img-6.png" class="card-img-top" alt="Charging Cables" style="height:250px;width:105%">
+                <div class="card-body ">
+                    <p>Original Samsung Galaxy Fast Charger Car Wall Adapter Type C Cable S9+ Note8 S8</p>
+                    <h5 class="card-title">$11.99</h5>
+                </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2">
+                <img src="./asset/img-7.png" class="card-img-top" alt="Charging Cables" style="height:250px;width:105%">
+                <div class="card-body ">
+                    <p>Magnetic Phone Holder for Car, Dashboard Car Phone Holder Mount</p>
+                    <h5 class="card-title">$6.99</h5>
+                </div>
+        </div>
+    </div>
+</div> 
+ 
+<footer>
+    <div class="container ">
+        <div class="row">
+            <div class="col md-1"></div>
+            <div class="col-xs-11 col-sm-11 col-md-11">
+               <p>
+                <strong>Your home of phones and accessories </strong>Buying a new cell phone or smartphone may seem complicated, but eBay makes the process simple and painless. Our wide collection includes a wide variety of phones from Apple, Samsung, LG and other major brands. We also have phones from all major cell phone companies including Verizon, AT&T and Sprint, as well as unlocked cell phones. When in doubt, check out some of our previous cell phone buying guides for some tips on how to make the best selection for your needs and budget.<br><br>
+                <strong>Enjoy the latest smartphones at affordable prices.</strong>Today's cell phones do more than make calls. Smartphones work as a messaging service, a web browser, a camera, a music player and a GPS navigation unit, all in one device. Generally speaking, the more features a cell phone has and the more storage it has integrated, the higher the cost of the phone. Buy a best-selling Apple smartphone, such as the iPhone 7 and iPhone 7 Plus, and check out the latest versions of Samsung, the Galaxy Note 8, S8 +, and S8 or its successors, the Samsung Galaxy S9 and S9 +, available now. <br><br>
+                If the budget is a concern, consider looking at used cell phones or buying last year's model like the Samsung Galaxy S7 or iPhone 6s — it should work well with this year's applications. In addition to used phones, eBay has a large number of phones restored by the seller and the manufacturer that often come with warranty. You will also find unlocked and prepaid phones. And many of our sellers offer free shipping. If you still don't have funds, you can sell your current phone on eBay to help finance the purchase of your new cell phone. <br><br>
+                Customize your smartphone Do not forget to customize! Our collection of cell phone accessories includes: cases, screen protectors, chargers, headphones and all kinds of items to personalize your phone and improve its functionality. We also offer cell phone batteries, replacement screens and other cell phone repair parts. <br>
+                Check out the latest Smart Watches Is your smartphone connected in an apparent and permanent way to your hand? You may want to consider adding a smart watch with style to your technology line. We offer the latest from Apple, Motorola, Samsung, Pebble and other major brands. In addition, we provide plenty of accessories for smart watches such as cases, docking stations and screen protectors to make sure you can protect your smart watch at all times. With a smart watch, one of the newest and most popular mobile devices, you can access the latest applications, games and much more without putting your hand in your pocket or purse. No matter what your preference, you'll save on the latest and most popular mobile phones. <br><br>
+                Available now... The long-awaited iPhone 8 and iPhone X have arrived, which means that one of the most exciting iPhone lines achieved a radical transformation. Although the latest iPhones have dazzled consumers, these phones offer even more impressive specifications. With an efficient, solid and fingerprint-resistant OLED display - not to mention the super fast processor - the new iPhones have extended battery life and performance much faster than the iPhone 4. The iPhone 8 comes in two sizes, With screens measuring 4.7 inches and 5.5 inches, while the iPhone X has a top-to-bottom screen that measures 5.8 inches and the entire series features the patented Super Retina display for crisp and clear images, as well as intense and bright colors. Other impressive features of the 8 and X include dust, water and fingerprint resistant exteriors made of precious solid glass; 12 megapixel cameras with digital zoom, autofocus and Live Photos; 4K video recording for the sharpest and clearest images and videos. Accessories like Apple's Bluetooth headphones do not even need cables and can tell when they have been removed from the ears, and the iPhone 8 and X are charged quickly and wirelessly, so chargers and cables are a thing of the past. Newer iPhones even include a high-tech facial recognition feature, called Face ID, which improves smartphone security and modernizes your phone. Should you switch to the latest additions to the Apple smartphone family? The choice is yours, but an iPhone 8 or iPhone X is almost future proof; Not to mention luxurious and extremely powerful. <br><br>
+               </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</footer>
+<section>
+    <div class="container">
+    <div class="row ">
+    <div class="col-md-1"></div>
+    <div class="col-xs-12 col-sm-12 col-md-11">
+    <h2>Related Search</h2>
+    <span>
+        <button type="button" class="btn btn-light m-3">Smart Watch with Phone</button>
+        <button type="button"class="btn btn-light m-3 ">Relojes Inteligentes Para Android</button>
+        <button type="button"class="btn btn-light m-3 ">Android Smartwatch</button>
+        <button type="button"class="btn btn-light m-3 ">Smart Devices</button>
+        <button type="button"class="btn btn-light m-3 ">Apple Watch Phone</button>
+        <button type="button"class="btn btn-light m-3 ">Watch Phone</button>
+        <button type="button"class="btn btn-light m-3 ">Android Smart Watch for Men</button>
+        <button type="button"class="btn btn-light m-3 ">Smart Watch iPhone</button>
+        <button type="button"class="btn btn-light m-3 ">Smartwatch with Sim Card</button>
+        <button type="button"class="btn btn-light m-3 ">Phone Warranty</button>
+        <button type="button"class="btn btn-light m-3 ">Latest Phone Deals</button>
+        <button type="button"class="btn btn-light m-3 ">Smart Watch with Sim Card Slot</button>
+    </span>
+</div>
+</div>
+</div>
+</section>
+<footer class="foot1 ">
+      <div class="container ">
+        <span class="row ">
+            <span class="col-xs-6 col-sm-6 col-md-12">
+                <a href="">About eBay</a>
+                <a href="">Announcements</a>
+                <a href="">Community</a>
+                <a href="">Security Center</a>
+                <a href="">Seller Center</a>
+                <a href="">Policies</a>
+                <a href="">Affiliates</a>
+                <a href="">Help & Contact</a>
+                <a href="">Site Map</a>
+            </span>
+        </span>
+        <span id="foot1-2" class="row">
+            <span class="col-xs-1 col-sm-11 col-md-12">
+                <small>Copyright © 1995-2025 eBay Inc. All Rights Reserved.</small>
+                <a href="" > Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice </a>
+            </span>
+        </span>
+      </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+
+    <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+<style>
+    #navbar1 .align-items-center{
+            margin-left:-130px;
+        }
+        #navbar1 .align-items-center a{
+            padding: 3px;
+        }
+
+        .navbar-brand img {
+            max-height: 200px;
+            width: 200%;
+            margin-top: -26px;
+        }
+        #category option{
+            overflow: scroll;
+        }
+        #forms{
+            text-indent: 10px;
+        }
+        #forms input,label{
+            margin: 10px;
+            padding:7px;
+            font-size: larger;
+        }
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  py-2" id="navbar1">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="mr-2">Hi!</span>
+                <a href="./signin.html" class="btn btn-link p-0">Sign in</a>
+                <span class="mx-1">or</span>
+                <a href="./register.html" class="btn btn-link p-0">Register</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Daily Deals</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Brand Outlet</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Help & Contact</a>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="topNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Watchlist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My eBay</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- Desktop Navbar -->
+            <div class="desktop-elements w-100 d-none d-lg-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="./asset/ebaylogo.png" alt="eBay Logo" style="max-width: 140px;">
+                </a>
+                <h3>Advanced Search</h3>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <h3>Advanced search</h3>
+               <h4><strong>Items</strong></h4>
+               <ul class="list-unstyled">
+                <li>Find item</li>
+                <li>By seller</li>
+                <li>By Item number</li>
+               </ul>
+               <h4><strong>Stores</strong> </h4>
+               <ul class="list-unstyled" id="forms">
+                <li>Items in stores</li>
+                <li>Find stores</li>
+               </ul>
+            </div>
+            <div class="col-md-10">
+                <h2>Find Items</h2>
+                <form class="form-group">
+                    <label for=""><strong>Enter keywords or item number</strong> </label>
+                    <input type="text" class="form-control border-black w-50 p-2 m-2 bg-light" placeholder="Enter keywords or item number">
+                    <label for="">Keyword options</label><br>
+                    <select name="key" id="key" class="p-2 w-25 m-2 form-control bg-light">
+                        <option value="all words,any order">All word, Any order</option>
+                        <option value="any words,any order">Any word,Any order</option>
+                        <option value="Extract words,any order">Extract words,Any order</option>
+                    </select><br>
+                    <label for="">Exclude words from your search</label><br>
+                    <input type="text" class="w-25 p-3 m-2 form-control bg-light" placeholder="Exclude words from your search">
+                    <label for="">In this category</label>
+                    <select name="category" id="category" class="w-25 form-control bg-light">
+                           <option value="All category">All category</option>
+                           <option value="baby">baby</option>
+                           <option value="books">books</option>
+                           <option value="All category">decors</option>
+                           <option value="All category">home applicance</option>
+                           <option value="All category">crafts</option>
+                           <option value="All category">consumer</option>
+                           <option value="All category">cameras</option>
+                           <option value="All category">Photos</option>
+                           <option value="All category">music</option>
+                           <option value="All category">tops</option>
+                           <option value="All category">accessories</option>
+                           <option value="All category">womens wears</option>
+                           <option value="All category">deals</option>
+                           <option value="All category">dress</option>
+                           <option value="All category">men's wears</option>
+                           <option value="All category">electronic</option>
+                           <option value="All category">discounts</option>
+                           <option value="All category">motors</option>
+                           <option value="All category">fashion</option>
+                           <option value="All category">mobiles</option>
+                           <option value="All category">luxury</option>
+                           <option value="All category">pre-luxury</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" style="width:10%;padding:15px;border-radius: 30px;">Search</button><p>See general <a href="">search tips</a>or <a href="">using advanced options</a></p><hr>
+                    <h3><strong>Search including</strong></h3>
+                    <input type="checkbox">
+                    <label for="">Title and description</label><br>
+                    <input type="checkbox">
+                    <label for="">Completed items</label><br>
+                    <input type="checkbox">
+                    <label for="">Sold items</label><hr>
+                    <h3><strong>Price</strong></h3>
+                    <input type="checkbox">
+                    <label for="">Show items priced from$</label>
+                    <input type="number" placeholder="Min price" class="p-2">to$
+                    <input type="number" placeholder="Max price" class="p-2">
+                    <h4><strong>Buying Format</strong></h4>
+                    <input type="checkbox">
+                    <label for="">Accepts offers</label><br>
+                    <input type="checkbox">
+                    <label for="">Buy it now</label><br>
+                    <input type="checkbox">
+                    <label for="">Classified ads</label><br>
+                    <h4><strong>Condition</strong></h4>
+                    <input type="radio">
+                    <label>New</label><br>
+                    <input type="radio">
+                    <label for="">Used</label><br>
+                    <input type="radio">
+                    <label for="">Not specified</label><br>
+                    <button type="button" class="btn btn-primary" >Search</button><a href="" class="m-3">Clear options</a>
+                </form>
+
+            </div>
+
+        </div>
+    </div><hr>
+    <footer class="foot mt-5 mb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="list-unstyled">
+                        About eBay
+                        Announcements
+                        Community
+                        Security 
+                        CenterSeller
+                        CenterPolicies
+                        Affiliates
+                        Help & Contact
+                        Site Map
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <span>Copyright © 1995-2025 eBay Inc. All Rights Reserved. <a href="">Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice </a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

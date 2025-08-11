@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Electronics, Cars, Fashion Collectibles & More | eBay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+
+    <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light  py-2" id="navbar1">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <span class="mr-2">Hi!</span>
+            <a href="./sign.html" class="btn btn-link p-0">Sign in</a>
+            <span class="mx-1">or</span>
+            <a href="./register.html" class="btn btn-link p-0">Register</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Daily Deals</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Brand Outlet</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Help & Contact</a>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="topNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Watchlist</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">My eBay</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</nav>
+<hr>
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container-fluid">
+        <!-- Desktop Navbar -->
+        <div class="desktop-elements w-100 d-none d-lg-flex">
+            <a class="navbar-brand" href="#">
+                <img src="./asset/ebaylogo.png" alt="eBay Logo" style="max-width: 140px;">
+            </a>
+            
+            <div class="dropdown mx-3">
+                <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown">
+                    Shop by Category
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Electronics</a>
+                    <a class="dropdown-item" href="./fashion.html">Fashion</a>
+                    <a class="dropdown-item" href="#">Home & Garden</a>
+                    <a class="dropdown-item" href="#">Sports</a>
+                    <a class="dropdown-item" href="#">Toys</a>
+                </div>
+            </div>
+
+            <div class="desktop-search-container flex-grow-1">
+                <div class="input-group">
+                    <input type="text" id="searchbar" class="form-control w-50" placeholder="Search for anything">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            All Categories
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./smartphone.html">Electronics</a>
+                            <a class="dropdown-item" href="#">Fashion</a>
+                            <a class="dropdown-item" href="#">Home & Garden</a>
+                            <a class="dropdown-item" href="#">Sports</a>
+                            <a class="dropdown-item" href="#">Toys</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-25">Search</button>
+                    <a href="./advanced.html" class="align-self-center">Advanced</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="mobile-search-container w-100 d-lg-none">
+            <a class="navbar-brand" href="#">
+                <img src="./asset/ebaylogo.png" alt="eBay Logo">
+            </a>
+            <input type="text" class="form-control" placeholder="Search">
+            <button class="btn btn-primary">
+                <i class="fas fa-search "></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Category Navigation -->
+<div class="container-fluid border-bottom">
+    <div class="row">
+        <div class="col-12">
+            <nav class="category-nav py-2">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explore(New!)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Saved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Electronics</a>                        <div class="dropdown-menu">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col-md-3">
+                                      <strong>Most popular categories</strong>
+                                      <a class="dropdown-item" href="./smartphone.html">Smartphones</a>
+                                      <a class="dropdown-item" href="#">Video games and consoles</a>
+                                      <a class="dropdown-item" href="#">Computers and tablets</a>
+                                      <a class="dropdown-item" href="#">Cameras and photos</a>
+                                      <a class="dropdown-item" href="#">Camera drones</a>
+                                      <a class="dropdown-item" href="#">Refurbished</a>
+                                      <a class="dropdown-item" href="#">Smart home</a>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <strong>More categories</strong>
+                                      <a class="dropdown-item" href="#">Apple</a>
+                                      <a class="dropdown-item" href="#">Samsung</a>
+                                      <a class="dropdown-item" href="#">Portable audio</a>
+                                      <a class="dropdown-item" href="#">Smart watches</a>
+                                      <a class="dropdown-item" href="#">Sell on eBay</a>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <img src="./asset/elctro.png" alt="img not found" class="p-3 img-fluid">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Motors</a>
+                        <div class="dropdown-menu">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col-md-3">
+                                      <strong>Car</strong>
+                                      <a class="dropdown-item" href="#">Auto and truck parts</a>
+                                      <a class="dropdown-item" href="#">Turbo chargers</a>
+                                      <a class="dropdown-item" href="#">Clothing and merchandise</a>
+                                      <a class="dropdown-item" href="#">Shock absorbers</a>
+                                      <a class="dropdown-item" href="#">Electronic and GPS</a>
+                                      <a class="dropdown-item" href="#">Air intake</a>
+                                      <a class="dropdown-item" href="#">Smart home</a>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <strong>Motorcycle and more</strong>
+                                      <a class="dropdown-item" href="#">Motorcycle parts</a>
+                                      <a class="dropdown-item" href="#">Body and frame</a>
+                                      <a class="dropdown-item" href="#">Engines and parts</a>
+                                      <a class="dropdown-item" href="#">Accessories</a>
+                                      <a class="dropdown-item" href="#">Exhausts and systems</a>
+                                      <a class="dropdown-item" href="#">Rims</a>
+                                      <a class="dropdown-item" href="#">Deals</a>
+                                      <a class="dropdown-item" href="#">Sell on eBay</a>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <img src="./asset/motor.jpg" alt="img not found" class="p-3 img-fluid" >
+                                  </div>
+                              </div>
+                          </div>
+                   </div>
+                  
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="fashion.html">Fashion</a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <strong>Most popular categories</strong>
+                                        <a class="dropdown-item">Footwear</a>
+                                        <a class="dropdown-item"> Women's clothing</a>
+                                        <a class="dropdown-item">Footwear for women</a>
+                                        <a class="dropdown-item"> Men's clothing</a>
+                                        <a class="dropdown-item">Men's footwear</a>
+                                        <a class="dropdown-item"> Watches</a>
+                                        <a class="dropdown-item">Jewelry</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <strong>More categories</strong>
+                                        <a class="dropdown-item">Handbags</a>
+                                        <a class="dropdown-item">Sunglasses</a>
+                                        <a class="dropdown-item">Wallets</a>
+                                        <a class="dropdown-item">Deals</a>
+                                        <a class="dropdown-item">Sell on eBay</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="./asset/fashion.png" alt="img not found" class="p-3 img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Collectibles</a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <strong>Most popular categories</strong>
+                                        <a class="dropdown-item">Makeup</a>
+                                        <a class="dropdown-item">Skin care</a>
+                                        <a class="dropdown-item">Hair care</a>
+                                        <a class="dropdown-item">Fragrances</a>
+                                        <a class="dropdown-item">Bath and body</a>
+                                        <a class="dropdown-item">Health care</a>
+                                        <a class="dropdown-item">Oral care</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <strong>More categories</strong>
+                                        <a class="dropdown-item">Shaving and hair removal</a>
+                                        <a class="dropdown-item">Vitamins and dietary supplements</a>
+                                        <a class="dropdown-item">Deals</a>
+                                        <a class="dropdown-item">Sell on eBay</a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="./asset/art.png" alt="img not found" class="p-3 img-fluid" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Sports</a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <strong>Most popular categories</strong>
+                                        <a class="dropdown-item"> Cycling</a>
+                                        <a class="dropdown-item">Fitness, running and yoga</a>
+                                        <a class="dropdown-item">Fitness Tech</a>
+                                        <a class="dropdown-item">Fishing</a>
+                                        <a class="dropdown-item">Camping</a>
+                                        <a class="dropdown-item">Scooters</a>
+                                        <a class="dropdown-item">Team sports</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <strong>More categories</strong>
+                                        <a class="dropdown-item">Watersports</a>
+                                        <a class="dropdown-item">Winter sports</a>
+                                        <a class="dropdown-item">Box and MMA</a>
+                                        <a class="dropdown-item">Swimming</a>
+                                        <a class="dropdown-item">GPS & Running Watches</a>
+                                        <a class="dropdown-item">Garmin</a>
+                                        <a class="dropdown-item">Deals</a>
+                                        <a class="dropdown-item">Sell on eBay</a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="./asset/sports.png" alt="img not found" class="p-3 img-fluid" >
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Health & Beauty</a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <strong>Most popular categories</strong>
+                                        <a class="dropdown-item">Action figures</a>
+                                        <a class="dropdown-item">Building toys</a>
+                                        <a class="dropdown-item">Dolls and bears</a>
+                                        <a class="dropdown-item">Educational</a>
+                                        <a class="dropdown-item">Electronic and remote control</a>
+                                        <a class="dropdown-item">Games</a>
+                                        <a class="dropdown-item">Model building</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <strong>More categories</strong>
+                                        <a class="dropdown-item">Outdoor toys</a>
+                                        <a class="dropdown-item">Preschool toys</a>
+                                        <a class="dropdown-item">Puzzles</a>
+                                        <a class="dropdown-item">Radio control and control line</a>
+                                        <a class="dropdown-item">Stuffed animals</a>
+                                        <a class="dropdown-item">Toy vehicles</a>
+                                        <a class="dropdown-item">Deals</a>
+                                        <a class="dropdown-item">Sell on eBay</a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="./asset/beauty.png" alt="img not found" class="p-3 img-fluid" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Industrial Equipment</a>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <strong>Most popular categories</strong>
+                                        <a class="dropdown-item">Action figures</a>
+                                        <a class="dropdown-item">Building toys</a>
+                                        <a class="dropdown-item">Dolls and bears</a>
+                                        <a class="dropdown-item">Educational</a>
+                                        <a class="dropdown-item">Electronic items</a>
+                                        <a class="dropdown-item">Games</a>
+                                        <a class="dropdown-item">Model building</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <strong>More categories</strong>
+                                        <a class="dropdown-item">Outdoor toys</a>
+                                        <a class="dropdown-item">Preschool toys</a>
+                                        <a class="dropdown-item">Puzzles</a>
+                                        <a class="dropdown-item">Radio controls</a>
+                                        <a class="dropdown-item">Stuffed animals</a>
+                                        <a class="dropdown-item">Toy vehicles</a>
+                                        <a class="dropdown-item">Deals</a>
+                                        <a class="dropdown-item">Sell on eBay</a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="./asset/indus.png" alt="img not found" class="p-3 img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Home & Garden</a>
+                        <div class="dropdown-menu">
+                            <div class="container-fluid">
+                                <div class="row w-100">
+                                    <div class="col-md-3">
+                                        <strong>Most popular categories</strong>
+                                        <a class="dropdown-item">Action figures</a>
+                                        <a class="dropdown-item">Building toys</a>
+                                        <a class="dropdown-item">Dolls and bears</a>
+                                        <a class="dropdown-item">Educational</a>
+                                        <a class="dropdown-item">Electronic items</a>
+                                        <a class="dropdown-item">Games</a>
+                                        <a class="dropdown-item">Model building</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <strong>More categories</strong>
+                                        <a class="dropdown-item">Outdoor toys</a>
+                                        <a class="dropdown-item">Preschool toys</a>
+                                        <a class="dropdown-item">Puzzles</a>
+                                        <a class="dropdown-item">Radio control </a>
+                                        <a class="dropdown-item">Stuffed animals</a>
+                                        <a class="dropdown-item">Toy vehicles</a>
+                                        <a class="dropdown-item">Deals</a>
+                                        <a class="dropdown-item">Sell on eBay</a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="./asset/home.png" alt="img not found" class="p-3 img-fluid" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Sell</a>
+                        <div class="dropdown-menu">
+                            <div class="container-fluid">
+                                <div class="row w-100">
+                                    <div class="col-md-4">
+                                        <a class="dropdown-item" href="#"> How to create a listing</a>
+                                        <a class="dropdown-item" href="#">Join our growth program</a>
+                                        <a class="dropdown-item" href="#">Seller center</a>
+                                        <a class="dropdown-item" href="#">Seller updates</a>
+                                        <a class="dropdown-item" href="#">Seller customer service</a>
+                                        <a class="dropdown-item" href="#">eBay managed payments</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="" class="dropdown-item">Learn to sell</a>
+                                        <a href="" class="dropdown-item">eBay stores</a>
+                                        <a href="" class="dropdown-item">eBay fees</a>
+                                        <a href="" class="dropdown-item">Selling limits</a>
+                                    </div>
+                                    <div class="col-md-5"></div>
+                                    <img src="./asset/sell.png" alt="img not found" class="p-3 img-fluid" >
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- section 1 -->
+<section class="py-5" id="sec1" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-3"><strong>Limitless love, limitless luxury</strong></h2>
+                <p class="lead mb-4"><b>Save 15% on luxury fashion accessories for Valentine's Day.</b></p>
+                <button type="button" class="btn btn-dark btn-lg ">Shop Luxury</button><br><br><br>
+                <a href="TandC.html" class="text-black">*See Terms & Conditions.</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Categories -->
+<section class="popular-categories py-5">
+    <div class="container-fluid">
+        <h2>Explore Popular Categories</h2>
+        <div class="row text-center">
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <img src="./asset/redbag.png" class="rounded-circle" alt="Bags" style="height: 200px; ">
+                <p><strong>Bags</strong></p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <img src="./asset/shoe.png" class="rounded-circle" alt="Sneakers" style="height: 200px;">
+                <p><strong>Sneakers</strong></p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <img src="./asset/tier.png" class="rounded-circle" alt="P&B"style="height: 200px;" >
+                <p><strong>P&B</strong></p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <img src="./asset/refur.png" class="rounded-circle" alt="Refurbished" style="height: 200px;">
+                <p><strong>100% Refurbished</strong></p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <img src="./asset/lux.png" class="rounded-circle" alt="Luxury" style="height: 200px;">
+                <p><strong>Pre-loved Luxury</strong></p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <img src="./asset/toys.png" class="rounded-circle" alt="Toys" style="height: 200px;" >
+                <p><strong>Toys</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shopping Made Easy Section -->
+<section class=" py-5">
+    <div class="container" style="background-color: rgb(209, 199, 199);padding: 50px;">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h2 class="mb-3">Shopping made easy</h2>
+                <p class="lead mb-md-0">Enjoy reliability, secure deliveries and hassle-free returns.</p>
+            </div>
+            <div class="col-md-4 text-md-right">
+                <a href="#" class="btn btn-dark btn-lg">Start Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Save on Everyday Section -->
+<section class="py-5" id="sec5" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-3"><strong>Save on your everyday ally</strong></h2>
+                <p class="lead mb-4">Upgrade your smartphone and save with quality refurbished.</p>
+                <button type="button" class="btn btn-dark btn-lg">Shop Smartphone</button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="foot">
+    <div class="container-fluid">
+       <div class="row" >
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 ">
+               <ul class="list-unstyled mt-5" >
+               <li><a href="" class="font-weight-bold">Buy</a></li>
+               <li><a href="">Registration</a></li>
+               <li><a href="">Bidding & buying help</a></li>
+               <li><a href="./stores.html">Stores</a></li>
+               <li><a href="">Curator Collections</a></li>
+               <li><a href="">eBay for Charity</a></li>
+               <li><a href="">Charity Shop</a></li>
+               <li><a href="">Seasonal Sales and events</a></li>
+               <li><a href="">eBay Gift Cards</a></li>
+           </ul>
+           </div>
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+               <ul class="list-unstyled mt-5">
+               <li><a href=""class="font-weight-bold">Sell</a></li>
+               <li><a href="">Start selling</a></li>
+               <li><a href="">How to sell</a></li>
+               <li><a href="">Business sellers</a></li>
+               <li><a href="">Affiliates</a></li>
+               <li><a href="">Buy</a></li>
+           </ul>
+           
+           <ul class="list-unstyled">
+               <li><a href=""class="font-weight-bold">Tools & apps</a></li>
+               <li><a href="">Developers</a></li>
+               <li><a href="">Security center</a></li>
+               <li><a href="">Site map</a></li>
+           </ul>
+       </div>
+       <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+           <ul class="list-unstyled mt-5">
+           <li><a href=""class="font-weight-bold">eBay companies</a></li>
+           <li><a href="">TCGplayer</a></li>
+       </ul>
+       <ul class="list-unstyled mt-5">
+           <p class="font-weight-bold">Stay connected</p>
+           <li><a href=""><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+           <li><a href=""><i class="fa-brands fa-square-twitter"></i>   (Twitter)</a></li>
+       </ul>
+       </div>
+       <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+           <ul class="list-unstyled mt-5">
+           <li><a href=""class="font-weight-bold"> About eBay</a></li>
+           <li><a href=""> Company info</a></li>
+           <li><a href=""> News</a></li>
+           <li><a href=""> Deferred</a></li>
+           <li><a href=""> Investors</a></li>
+           <li><a href="">Careers</a></li>
+           <li><a href=""> Diversity & Inclusion</a></li>
+           <li><a href="">Global Impact</a></li>
+           <li><a href="">Government relations</a></li>
+           <li><a href="">(VeRO) Program</a></li>
+           <li><a href=""> eCI Licenses</a></li>
+           </ul>
+       </div>
+       <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+           <ul class="list-unstyled mt-5">
+           <li><a href=""class="font-weight-bold">Help & Contact</a></li>
+           <li><a href="">Seller Center</a></li>
+           <li><a href="">Contact Us</a></li>
+           <li><a href="./returns.html">eBay Returns</a></li>
+           <li><a href="">eBay Money Back Guarantee</a></li>
+           </ul>
+           <ul class="list-unstyled mt-5">
+           <li><a href=""class="font-weight-bold">Help & Contact</a></li>
+           <li><a href="">Community</a></li>
+           <li><a href="">Announcements</a></li>
+           <li><a href="">eBay Community</a></li>
+           <li><a href="./podcast.html">eBay for Business Podcast</a></li> 
+       </div>
+       <div class="row " >
+           <div class="col-lg-auto">
+               <small >Copyright © 1995-2025 eBay Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy </small>
+           </div>
+       </div>
+       </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

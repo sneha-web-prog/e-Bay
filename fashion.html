@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion on eBay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+
+    <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+  <style>
+     #navbar1 .align-items-center{
+            margin-left:-130px;
+        }
+        #navbar1 .align-items-center a{
+            padding: 3px;
+        }
+
+        .navbar-brand img {
+            max-height: 200px;
+            mix-blend-mode:normal;
+            margin-top: -26px;
+        }
+        
+        .search-container {
+            flex: 1;
+            margin: 0 auto;
+        }
+        #searchbar{
+            margin-left: -200px;
+            border:3px solid black;
+            border-radius: 40px;
+            height: 50px;
+        }
+        .btn-primary{
+            width:80px;
+        }
+        @media (min-width: 992px) {
+            .mobile-search-container {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .desktop-elements {
+                display: none;
+            }
+
+            .mobile-search-container {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .mobile-search-container .form-control {
+                flex-grow: 1;
+                margin-right: 10px;
+            }
+
+            .mobile-search-container .navbar-brand img {
+                max-height: 40px;
+            }
+        }
+
+        .desktop-search-container .input-group {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .desktop-search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .link{
+            color: black;
+        }
+        section a{
+                 color:black;
+                 font-size: large;
+        }
+        section ul{
+            margin: 10px;
+        }
+       
+  </style>
+        
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  py-2" id="navbar1">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="mr-2">Hi!</span>
+                <a href="./signin.html" class="btn btn-link p-0">Sign in</a>
+                <span class="mx-1">or</span>
+                <a href="./register.html" class="btn btn-link p-0">Register</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Daily Deals</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Brand Outlet</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Help & Contact</a>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="topNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Watchlist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My eBay</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="container-fluid">
+            <!-- Desktop Navbar -->
+            <div class="desktop-elements w-100 d-none d-lg-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="./asset/ebaylogo.png" alt="eBay Logo" style="max-width: 140px;">
+                </a>
+                
+                <div class="dropdown mx-3">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown">
+                        Shop by Category
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Fashion</a>
+                        <a class="dropdown-item" href="#">Home & Garden</a>
+                        <a class="dropdown-item" href="#">Sports</a>
+                        <a class="dropdown-item" href="#">Toys</a>
+                    </div>
+                </div>
+    
+                <div class="desktop-search-container flex-grow-1">
+                    <div class="input-group">
+                        <input type="text" id="searchbar" class="form-control w-50" placeholder="Search for anything">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                All Categories
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./smartphone.html">Electronics</a>
+                                <a class="dropdown-item" href="#">Fashion</a>
+                                <a class="dropdown-item" href="#">Home & Garden</a>
+                                <a class="dropdown-item" href="#">Sports</a>
+                                <a class="dropdown-item" href="#">Toys</a>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-25">Search</button>
+                        <a href="#" class="align-self-center">Advanced</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Mobile Navbar -->
+            <div class="mobile-search-container w-100 d-lg-none">
+                <a class="navbar-brand" href="#">
+                    <img src="./asset/ebaylogo.png" alt="eBay Logo">
+                </a>
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="btn btn-primary">
+                    <i class="fas fa-search "></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <h1><strong class="m-5">Fashion</strong></h1>
+    <div class="container-fluid">
+        <div class="row mb-3" >
+                <div class="col-md-2 mt-5 p-3">
+                    <ul class="list-unstyled">
+                    <li><h4>Top Brands</h4></li>
+                    <li><a href=""> Adidas</a></li>
+                    <li><a href="">Air Jordan</a></li>
+                    <li><a href="">Anthropologie</a></li>
+                    <li><a href="">Calvin Klein</a></li>
+                    <li><a href="">Chanel</a></li>
+                    <li><a href="">Coach</a></li>
+                    <li><a href="">David Yurman</a></li>
+                    <li><a href="">Free People</a></li>
+                    <li><a href="">Gucci</a></li>
+                    <li><a href="">Invicta</a></li>
+                    <li><a href="">J. Crew</a></li>
+                    <li><a href="">Levi's</a></li>
+                    <li><a href="">Louis Vuitton</a></li>
+                    <li><a href="">Lululemon</a></li>
+                   <li><a href="">Madewell</a></li>
+                   <li><a href="">Michael Kors</a></li>
+                   <li><a href="">Nike</a></li>
+                   <li><a href="">Omega</a></li>
+                   <li><a href="">Ralph Lauren</a></li>
+                   <li><a href="">Ray-Ban</a></li>
+                   <li> <a href="">Rolex</a></li>
+                   <li> <a href="">Supreme</a></li>
+                   <li> <a href="">Tory Burch</a></li>
+                   <li> <a href="">Under Armour</a></li>
+                   <li>  <a href="">Victoria's Secret</a></li>
+                   <li>  <a href="">Zara</a></li><hr>
+                   <li> <strong><a href="">Deals</a></strong></li>
+                   <li> <a href="">deals</a></li><hr>
+                   
+                </ul>
+                </div>
+            <div class="col-sm-6 col-md-5 mt-5" >
+                  <div class="card m-3" style="background-image: url(./asset/f1.png); background-repeat: no-repeat; background-position: right; width:100%;height:290px">
+                  </div>
+                  <div class="card m-3 " style="background-image: url(./asset/f2.png); background-repeat: no-repeat; background-position: right; width:auto;height:290px">
+                  </div>  
+                  <div class="card  m-3 w-auto" style="background-image: url(./asset/f3.png); background-repeat: no-repeat; background-position: right; width:auto;height:290px">
+                  </div>  
+            </div>
+            <div class="col-sm-6 col-md-5 mt-5">
+                  <div class="card  m-3 " style="background-image: url(./asset/f5.png); background-repeat: no-repeat; background-position: right; width:auto;height:290px">
+                  </div>
+                  <div class="card m-3" style="background-image: url(./asset/f6.png); background-repeat: no-repeat; background-position: right; width:auto;height:290px">
+                  </div>
+                  <div class="card m-3" style="background-image: url(./asset/f4.png); background-repeat: no-repeat; background-position: right; width:auto;height:290px">
+                  </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="list-unstyled">
+                <li> <strong><a href="">Explore everything</a></strong> </li>
+                   <li><a href="">Women's Denim</a></li></li>
+                   <li><a href="">Women's Luxe Accesories</a></li>
+                   <li><a href="">Curvy Women's Style</a></li>
+                   <li><a href="">Makeup</a></li>
+                   <li><a href="">Men's Collectible Sneakers</a></li>
+                   <li><a href="">Men's Grooming</a></li><hr>
+                </ul>
+            </div>
+            <div class="col-md-10 ">
+                <strong><h4>Fashion</h4></strong>
+                <h5 class="mt-5">Dress to Impress</h5>
+               <p>Dress to impress and make the best of every day no matter what it has in store. With fashion's hottest must haves and accessories, you can find what you've been looking for on eBay.</p>
+               <h5 class="mt-5">Fashionably Perfect</h5>
+               <p>The stylish range of men's and women's clothing and shoes sizzle from head to toe, no matter the season. It's easier than ever to browse handbags, watches, and special occasion outfits by style, brand, or price. Search on eBay for women's fashion, men's fashion, clothes, shoes, handbags, jewelry, watches, jackets and more.</div>
+              </p>
+               <div class="col-md-2"></div>
+               <div class="col-md-10 ">
+
+              <h5>Top Fashion Brands</h5>
+
+               <p>If brands are your thing, you can surf eBay to find handbags by Vera Bradley, watches by Rolex, athletic apparel by Nike, shoes from Nine West, jackets from Michael Kors, and shoes from Puma. It's all here in the eBay Fashion Department.</p>
+             </div> 
+                <div class="col-md-2"></div>
+               <div class="col-md-10 ">
+              <h5>Men's Fashion</h5>
+
+               <p>Don't skimp when it comes to menswear that looks sharp and stylish. Beef up your closet with fashionable jeans, sweaters, and suits. eBay has a selection of accessories to fit your fancy, including hats, ties, wallets, and sunglasses. Grab a new briefcase for work or find the perfect backpack that holds all of your hiking supplies.</p>
+
+
+               <h5>Women's Fashion</h5>
+
+               <p>Browse the wide selection of style pieces on eBay, and unearth a world of trendy treasures for women and girls. Check out boots, heels, sandals, and athletic footwear that will keep you and your entire family moving year round. You can find sales that include top picks for fashionistas, or discover daily deals that add oomph to your closet without breaking the bank.</p>
+
+
+              <h5>Shopping is Fun!</h5>
+
+              <p>Take the strain out of shopping with eBay. Find great deals on classy clothing, stylish shoes, haute handbags, and jazzy jewelry. There are fashions and accessories for men, women, children, and babies so start shopping now.</p>
+
+               <p>Enjoy everyday low prices and free shipping with eBay Deals. Don’t forget to check out eBay Coupons for upcoming promotions.   </p>
+               </div>
+
+        </div>
+    </div>
+    <section>
+        <div class="container">
+        <div class="row ">
+        <div class="col-md-1"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <h2>Related Search</h2>
+        <span>
+            <button type="button" class="btn btn-light m-3">Smart Watch with Phone</button>
+            <button type="button"class="btn btn-light m-3 ">Relojes Inteligentes Para Android</button>
+            <button type="button"class="btn btn-light m-3 ">Android Smartwatch</button>
+            <button type="button"class="btn btn-light m-3 ">Smart Devices</button>
+            <button type="button"class="btn btn-light m-3 ">Apple Watch Phone</button>
+            <button type="button"class="btn btn-light m-3 ">Watch Phone</button>
+            <button type="button"class="btn btn-light m-3 ">Android Smart Watch for Men</button>
+            <button type="button"class="btn btn-light m-3 ">Smart Watch iPhone</button>
+            <button type="button"class="btn btn-light m-3 ">Smartwatch with Sim Card</button>
+            <button type="button"class="btn btn-light m-3 ">Phone Warranty</button>
+            <button type="button"class="btn btn-light m-3 ">Latest Phone Deals</button>
+            <button type="button"class="btn btn-light m-3 ">Smart Watch with Sim Card Slot</button>
+        </span>
+    </div>
+    </div>
+    </div>
+    </section>
+    <footer class="foot mt-5 mb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="list-unstyled">
+                        About eBay
+                        Announcements
+                        Community
+                        Security 
+                        CenterSeller
+                        CenterPolicies
+                        Affiliates
+                        Help & Contact
+                        Site Map
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <span>Copyright © 1995-2025 eBay Inc. All Rights Reserved. <a href="">Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice </a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

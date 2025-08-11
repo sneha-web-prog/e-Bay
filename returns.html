@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  eBay Returns</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+
+    <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+<style>
+     #navbar1 .align-items-center{
+            margin-left:-130px;
+        }
+        #navbar1 .align-items-center a{
+            padding: 3px;
+        }
+
+        .navbar-brand img {
+            max-height: 200px;
+            mix-blend-mode:normal;
+            margin-top: -26px;
+        }
+        
+        .search-container {
+            flex: 1;
+            margin: 0 auto;
+        }
+        #searchbar{
+            margin-left: -200px;
+            border:3px solid black;
+            border-radius: 40px;
+            height: 50px;
+        }
+        .btn-primary{
+            width:80px;
+        }
+        @media (min-width: 992px) {
+            .mobile-search-container {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .desktop-elements {
+                display: none;
+            }
+
+            .mobile-search-container {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .mobile-search-container .form-control {
+                flex-grow: 1;
+                margin-right: 10px;
+            }
+
+            .mobile-search-container .navbar-brand img {
+                max-height: 40px;
+            }
+        }
+
+        .desktop-search-container .input-group {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .desktop-search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .link{
+            color: black;
+        }
+        #tip li{
+              font-size: larger;
+              margin: 20px;
+        }
+</style>
+</head>
+<body>
+    <!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light  py-2" id="navbar1">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <span class="mr-2">Hi!</span>
+            <a href="./signin.html" class="btn btn-link p-0">Sign in</a>
+            <span class="mx-1">or</span>
+            <a href="./register.html" class="btn btn-link p-0">Register</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Daily Deals</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Brand Outlet</a>
+            <span class="mx-1"></span>
+            <a class="link" href="#">Help & Contact</a>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="topNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Watchlist</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">My eBay</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</nav>
+<hr>
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container-fluid">
+        <!-- Desktop Navbar -->
+        <div class="desktop-elements w-100 d-none d-lg-flex">
+            <a class="navbar-brand" href="#">
+                <img src="./asset/ebaylogo.png" alt="eBay Logo" style="max-width: 140px;">
+            </a>
+            
+            <div class="dropdown mx-3">
+                <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown">
+                    Shop by Category
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Electronics</a>
+                    <a class="dropdown-item" href="./fashion.html">Fashion</a>
+                    <a class="dropdown-item" href="#">Home & Garden</a>
+                    <a class="dropdown-item" href="#">Sports</a>
+                    <a class="dropdown-item" href="#">Toys</a>
+                </div>
+            </div>
+
+            <div class="desktop-search-container flex-grow-1">
+                <div class="input-group">
+                    <input type="text" id="searchbar" class="form-control w-50" placeholder="Search for anything">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            All Categories
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./smartphone.html">Electronics</a>
+                            <a class="dropdown-item" href="#">Fashion</a>
+                            <a class="dropdown-item" href="#">Home & Garden</a>
+                            <a class="dropdown-item" href="#">Sports</a>
+                            <a class="dropdown-item" href="#">Toys</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-25">Search</button>
+                    <a href="./advanced.html" class="align-self-center">Advanced</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="mobile-search-container w-100 d-lg-none">
+            <a class="navbar-brand" href="#">
+                <img src="./asset/ebaylogo.png" alt="eBay Logo">
+            </a>
+            <input type="text" class="form-control" placeholder="Search">
+            <button class="btn btn-primary">
+                <i class="fas fa-search "></i>
+            </button>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-lg-12 ">
+            <div class="p-5" style="background-color:rgb(190, 253, 245); height:350px;">
+            <h1><strong style="color:rgb(60, 60, 135);">Returns Made Simple</strong></h1>
+            <p><h3>Whether you shop or sell, we make returns easy.</h3></p>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-lg-6 ">
+            <div class="p-5" style="background-color:rgb(65, 214, 194); height:300px;" >
+            <h4><strong>I shop on eBay</strong></h4>
+            <p>Not exactly what you expected? Not to worry. We keep returns simple.</p>
+            <button type="button" class="btn btn-outline-light">Learn more</button>
+            </div>
+        </div>
+        <div  class="col-sm-6 col-lg-6">
+            <div class="p-5" style="background-color:rgb(52, 229, 208); height:300px;">
+            <h4><strong>I sell on eBay.</strong></h4>
+            <p>Give buyers another reason to love your listings by offering returns.</p>
+            <a href=""><button  type="button" class="btn btn-outline-light">Learn more</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+     <div class="col-sm-6 col-lg-6">
+        <div class="mt-5 p-5" style="background-color:rgb(197, 198, 198); height:350px;">
+            <h2><strong>Need to make a return?</strong></h2>
+            <p>Maybe it isn't your size. Maybe it isn't quite what you thought. Maybe it's just not totally you.</p>
+               <p> Most sellers on eBay offer returns, and whatever your reason, doing it is easy.</p>
+        </div>
+     </div>
+     <div class="col-sm-6 col-lg-6">
+        <div class="mt-5 "><img src="./return.png" alt="" style="height: 350px;width:100%">
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1"></div>
+
+        <div class="col-sm-11 col-lg-11 mt-5">
+            <h1 class="m-3"><strong>How it works</strong></h1>
+        </div>
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-3 mt-5">
+            <div class="p-3"><h1><strong>1 Start your return</strong></h1><p>In My eBay, find the item under Purchase history, then in More actions, choose Return this item.</p></div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="p-3"><h1><strong>2  Select By person</strong></h1><p>In My eBay, find the item under Purchase history, then in More actions, choose Return this item.</p></div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="p-3"><h1><strong>3 Ship it back </strong></h1><p>In My eBay, find the item under Purchase history, then in More actions, choose Return this item.</p></div>
+        </div>
+    </div><hr>
+</div>
+<div class="container m-10" id="tip">
+    <div class="col-lg-2 mt-5"></div>
+    <div><h4><strong>Quick Tips</strong></h4></div>
+    <ul class="p-5">
+        <li>Check the listing’s return policy before making your purchase.</li>
+        <li>Be sure to note shipping deadlines and whether an item can be returned for refund, replacement, or exchange.</li>
+        <li>Return the item in the same condition you received it in — pack it well. Learn more about the item <a href="">condition policy.</a> </li>
+        <li>We work hard to make returns smooth. For those rare cases when they don’t go that way, the <a href=" ">eBay Money Back Guarantee</a>  may help. Get the item you ordered or your money back—guaranteed.</li>
+    </ul>
+    <div class="col-lg-3"></div>
+</div>
+<footer class="foot mt-5 mb-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <small class="list-unstyled">
+                    About eBay
+                    Announcements
+                    Community
+                    Security 
+                    CenterSeller
+                    CenterPolicies
+                    Affiliates
+                    Help & Contact
+                    Site Map
+                </small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <small>Copyright © 1995-2025 eBay Inc. All Rights Reserved. <a href="">Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice </a></small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

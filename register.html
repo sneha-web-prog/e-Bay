@@ -1,0 +1,253 @@
+<d<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register: Create an personal eBay Account</title>
+    <title>Electronics, Cars, Fashion Collectibles & More | eBay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+
+    <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <style>
+       
+    .body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .signup-container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .signup-form {
+            padding: 2rem;
+        }
+        .nav-pills .nav-link.active {
+            background-color: #0064d2;
+            color: white;
+        }
+        .btn-primary {
+            background-color: #0064d2;
+            border-color: #0064d2;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #004a9e;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #0064d2;
+            box-shadow: 0 0 0 0.2rem rgba(0,100,210,0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 col-lg-4">
+                <img src="./ebaylogo.png" style="height: 110px; width: 180px;" alt="">    
+            </div>
+                  <div class="col-3"></div>
+                  <div class="col-3"></div>
+            <div class="col-sm-12  col-lg-2">
+                <a class="text-black " href="">Tell is what you think</a>
+            </div>
+        </div>
+    </div> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+             <img src="./asset/register.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2>Create an Account</h2>
+                </div>
+            
+                <ul class="nav nav-pills nav-justified mb-4" id="accountType" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="personal-tab" data-toggle="tab" data-target="#personal" type="button" role="tab">Personal Account</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="business-tab" data-toggle="tab" data-target="#business" type="button" role="tab">Business Account</button>
+                    </li>
+                </ul>
+            
+                <div class="tab-content" id="myTabContent">
+                    <!-- Personal Account Form -->
+                    <div class="tab-pane fade show active" id="personal" role="tabpanel">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="personalEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="personalEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="personalPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="personalPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <span style="color: grey;">By selecting Create personal account, you agree to our User Agreement and acknowledge reading our User Privacy Notice.</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary p-3 w-100">Create Personal Account</button>
+                        </form>
+                    </div>
+    
+                    <!-- Business Account Form  -->
+                    <div class="tab-pane fade" id="business" role="tabpanel">
+                        <form>
+                            <div class="mb-3">
+                                <label for="businessName" class="form-label">Business Name</label>
+                                <input type="text" class="form-control" id="businessName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="businessType" class="form-label ">Business Type</label>
+                                <select class="form-select form-control" id="businessType" required>
+                                    <option value="">Select Business Type</option>
+                                    <option value="sole">Sole Proprietorship</option>
+                                    <option value="llc">Limited Liability Company (LLC)</option>
+                                    <option value="corp">Corporation</option>
+                                    <option value="nonprofit">Non-Profit</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="businessEmail" class="form-label">Business Email</label>
+                                    <input type="email" class="form-control" id="businessEmail" required>
+                                </div>
+                              
+                            </div>
+                            <div class="mb-3">
+                                <label for="businessPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="businessPassword" required>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="businessTerms" required>
+                                <label class="form-check-label" for="businessTerms">
+                                    I’m only interested in buying on eBay for now
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary p-3 w-100">Create Business Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+       </div>
+
+    <footer>
+        <div class="container-fluid" >
+            <div class="row m-5" >
+                <div class="col">
+                    <small >Copyright © 1995-2025 eBay Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="container-fluid mt-3">
+            <div class="row "> offset-3(can add sm,md also),justify-content,align:center,start,end;align-self
+                   <div class="col-sm-6"><img src="./register.png" alt="" style="border-radius: 30px;height: 100%;width:110%"></div>
+                   <div class="col-sm-1"></div>
+                   <div class="col-sm">
+
+                   <div class="col">     
+                    <p class="lead bg-primary text-white"  style="padding:40px;"><i class="fa-solid fa-info" ></i>
+                             To buy and sell on <a href="#" class="text-white" >www.ebay.com</a> or other eBay sites internationally, existing users can login using their credentials or new users can register an eBay account on ebay.in. Kindly note you can no longer buy or sell on eBay.in
+                    </p></div>
+
+                    <div class="col display-6 lead">
+                    <div class="card">
+                        <form action="#" method="POST">
+                            <label for="name"></label>
+                            <input type="text">
+                        
+                    </div>
+                   
+                    </div>
+                    </form>
+            </div>
+            
+            </div>
+     -->
+    </body>
+</html>
