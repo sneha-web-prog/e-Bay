@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LOVE25LUX | eBay.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+
+    <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+<style>
+     #navbar1 .align-items-center{
+            margin-left:-130px;
+        }
+        #navbar1 .align-items-center a{
+            padding: 3px;
+        }
+
+        .navbar-brand img {
+            max-height: 200px;
+            mix-blend-mode:normal;
+            margin-top: -26px;
+        }
+        
+        .search-container {
+            flex: 1;
+            margin: 0 auto;
+        }
+        #searchbar{
+            margin-left: -200px;
+            border:3px solid black;
+            border-radius: 40px;
+            height: 50px;
+        }
+        .btn-primary{
+            width:80px;
+        }
+        @media (min-width: 992px) {
+            .mobile-search-container {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .desktop-elements {
+                display: none;
+            }
+
+            .mobile-search-container {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .mobile-search-container .form-control {
+                flex-grow: 1;
+                margin-right: 10px;
+            }
+
+            .mobile-search-container .navbar-brand img {
+                max-height: 40px;
+            }
+        }
+
+        .desktop-search-container .input-group {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .desktop-search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .link{
+            color: black;
+        }
+        nav{
+            position: sticky;
+            top: 4px;
+            background-color: white;
+        }
+        #lang{
+            margin: 20px;
+        }
+        #lang a{
+            font-size: larger;
+            margin: 10px;
+            color: black;
+        }
+        #lang strong{
+            font-size:larger
+        }
+        article{
+            margin: 3%;
+        }
+        article li{
+            word-spacing: 2px;
+            font-size: x-large;
+        }
+        article p{
+            word-spacing: 2px;
+
+            font-size: x-large;
+        }
+        footer a{
+            color: rgb(55, 134, 245);
+        }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  py-2" id="navbar1">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="mr-2">Hi!</span>
+                <a href="./signin.html" class="btn btn-link p-0">Sign in</a>
+                <span class="mx-1">or</span>
+                <a href="./register.html" class="btn btn-link p-0">Register</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Daily Deals</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Brand Outlet</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Help & Contact</a>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="topNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Watchlist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My eBay</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="container-fluid">
+            <!-- Desktop Navbar -->
+            <div class="desktop-elements w-100 d-none d-lg-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="./ebaylogo.png" alt="eBay Logo" style="max-width: 140px;">
+                </a>
+                
+                <div class="dropdown mx-3">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown">
+                        Shop by Category
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Fashion</a>
+                        <a class="dropdown-item" href="#">Home & Garden</a>
+                        <a class="dropdown-item" href="#">Sports</a>
+                        <a class="dropdown-item" href="#">Toys</a>
+                    </div>
+                </div>
+    
+                <div class="desktop-search-container flex-grow-1">
+                    <div class="input-group">
+                        <input type="text" id="searchbar" class="form-control w-50" placeholder="Search for anything">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                All Categories
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./smartphone.html">Electronics</a>
+                                <a class="dropdown-item" href="#">Fashion</a>
+                                <a class="dropdown-item" href="#">Home & Garden</a>
+                                <a class="dropdown-item" href="#">Sports</a>
+                                <a class="dropdown-item" href="#">Toys</a>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-25">Search</button>
+                        <a href="#" class="align-self-center">Advanced</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Mobile Navbar -->
+            <div class="mobile-search-container w-100 d-lg-none">
+                <a class="navbar-brand" href="#">
+                    <img src="./ebaylogo.png" alt="eBay Logo">
+                </a>
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="btn btn-primary">
+                    <i class="fas fa-search "></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-3 -->
+     <nav>
+        <div class="container-fluid" id="lang">
+            <div class="row">
+                <div class="col-md-3" >
+                    <strong>Select Your Language</strong>
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div> 
+                    <span class="col-md-4">
+                            <a href="" data-target="#English">English</a>
+                            <a href="" data-target="#Espano">Españo </a>
+                            <a href="" data-target="#Portugues">Português</a>
+                            <a href="" data-target="#Portugues do Brasi">Português do Brasi</a>
+                    </span>
+
+            </div>
+        </div><hr>
+     </nav>
+     <article >
+        <h1><strong id="English">English</strong></h1><br>
+<h1><strong>How to redeem your Coupon:</strong></h1>
+<ol>
+<li>Shop for luxury jewelry, handbags, and watches over $300.</li>
+<li>Enter the Coupon code LOVE25LUX in the redemption field.</li>
+<li>Pay for your item by 11:59 p.m. GMT-6 on February 18, 2025.</li>
+</ol>
+<h1><strong>Additional Coupon Terms & Conditions:</strong></h1><br>
+<ul>
+<li>The voucher is only valid on ebay.com</li>
+<li>The Coupon can be used for 15% discount off the purchase price of an eligible item within a single transaction. $300 minimum purchase of a single eligible item required, maximum discount is $100 off.</li>
+<li>The Coupon can be used maximum 3 times per eBay account and is valid from February 4, 2025 09:00 a.m. GMT-6 up until February 18, 2025 11:59 p.m. GMT-6 or while supplies last.</li>
+<li>Discount applies to the purchase price (excluding shipping, handling, taxes) of eligible items in Women’s Bags & Handbags, Watches, Parts & Accessories, Fine Jewelry, Fashion Jewelry, Engagement & Wedding, Men’s Jewelry, and/or Vintage & Antique Jewelry categories purchased on eBay.com.</li>
+<li>User’s shipping address needs to be located in one of the eligible shipping countries listed below.</li>
+<li>Coupon redemption is dependent on availability and, as such, may be revoked at any time without notice and at eBay’s sole discretion. </li>
+<li>Any unused difference between the discount amount, as shown on the Coupon, and the amount of shipping fees in a single transaction (or cart) will be forfeited.</li>
+<li>Coupon is subject to the laws of the State of California, United States of America, is void where prohibited, not redeemable for cash, has no face value, and cannot be combined with any other Coupon, Gift card, or Gift Certificate. eBay may cancel, amend, or revoke the Coupon at any time.</li><br>
+</ul>
+<h1><strong>List of eligible Categories:</strong></h1> <br>
+<ul>
+<li>Fine Jewelry (4196), Fashion Jewelry (10968), Vintage & Antique Jewelry (262024), Engagement & Wedding Jewelry (91427), Men’s Jewelry (10290), Women’s Bags & Handbags (169291), Watches, Parts & Accessories (260324).</li>
+</ul>
+<h1><strong>Eligible shipping countries:</strong></h1><br>
+<p>Albania, Algeria, Andorra, Angola, Anguilla, Antigua and Barbuda, Argentina, Armenia, Aruba, Azerbaijan Republic, Bahamas, Bahrain, Bangladesh, Barbados, Belize, Benin, Bermuda, Bolivia, Bosnia and Herzegovina, Botswana, Brazil, British Virgin Islands, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Cape Verde Islands, Cayman Islands, Central African Republic, Chad, Chile, Colombia, Comoros, Costa Rica, Cote d Ivoire (Ivory Coast), Cyprus, Czech Republic, Democratic Republic of the Congo, Denmark, Djibouti, Dominica, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Ethiopia, Falkland Islands (Islas Malvinas), Fiji, Finland, French Guiana, Gabon Republic, Gambia, Georgia, Ghana, Gibraltar, Greece, Greenland, Grenada, Guadeloupe, Guatemala, Guernsey, Guinea, Guinea-Bissau, Guyana, Haiti, Honduras, Hungary, Iceland, India, Indonesia, Jamaica, Japan, Jersey, Jordan, Kenya, Kuwait, Kyrgyzstan, Laos, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Macedonia, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Martinique, Mauritania, Mauritius, Mayotte, Mexico, Moldova, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Namibia, Netherlands Antilles, New Caledonia, New Zealand, Nicaragua, Niger, Nigeria, Norway, Oman, Pakistan, Panama, Paraguay, Peru, Philippines, Portugal, Puerto Rico, Qatar, Republic of Sudan, Republic of the Congo, Republic of the Croatia, Republic of the Union of Myanmar (Burma), Reunion, Romania, Rwanda, Saint Kitts-Nevis, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, San Marino, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Somalia, South Africa, South Korea, Sri Lanka, Suriname, Svalbard, Swaziland, Sweden, Taiwan, Tajikistan, Tanzania, Thailand, Togo, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos Islands, Uganda, United Arab Emirates, Uruguay, Uzbekistan, Venezuela, Vietnam, Virgin Islands (U.S.), Western Sahara, Yemen, Zambia, Zimbabwe. </p>
+
+<h1><strong id="Espano">Español</strong></h1><br>
+<h1><strong>Cómo canjear tu cupón:</strong></h1> <br>
+<ol>
+<li>Haz una compra por más de $300 en joyas de lujo, bolsos y relojes.</li>
+<li>Ingresa el código del cupón LOVE25LUX en el campo de canje.</li>
+<li>Paga tus artículos antes de las 11:59 PM GMT-6 del 18 de febrero de 2025.</li>
+</ol>
+<h1><strong>Términos y condiciones adicionales del cupón:</strong></h1>
+<ol>
+<li>El bono sólo es válido en ebay.com</li>
+<li>El cupón puede usarse para un descuento de 15% sobre el precio de la compra de un artículo elegible en una única transacción. Se requiere una compra mínima de $300 de un artículo elegible, el descuento máximo es de $100.</li>
+<li>El cupón puede usarse hasta máximo 3 veces por cada cuenta de eBay y es válido desde las 09:00:00 GMT-6 del 4 de febrero de 2025, hasta las 23:59:59 GMT-6 del 18 de febrero de 2025, o hasta agotarse la existencia.</li>
+<li>El descuento se aplica al precio de la compra (excluyendo costos de envío, manipulación e impuestos) de artículos elegibles en las categorías Bolsos y carteras para mujer, Relojes, Partes y accesorios, Joyería de lujo, Joyería de moda, Compromiso y bodas, Joyería para hombre, o Joyería vintage y antigua comprados en eBay.com.
+<li> La dirección de envío del usuario debe estar registrada en uno de los países elegibles que aparecen en el listado de abajo.</li>
+<li>El canje del cupón depende de la disponibilidad y, como tal, puede ser revocado en cualquier momento sin notificación previa y a discreción exclusiva de eBay.</li>
+<li>Cualquier diferencia no utilizada entre el monto del descuento, como se muestra en el cupón, y el monto de las tarifas de envío en una sola transacción (o carrito) se perderá.</li>
+<li>El Cupón está sujeto a las leyes del Estado de California de los Estados Unidos de América. No tiene validez donde esté prohibido, no se puede canjear por dinero, no tiene un valor nominal, y no puede ser combinado con ningún otro cupón, Tarjeta regalo, o Certificado de regalo. eBay puede cancelar, modificar o revocar el cupón en cualquier momento.</li>
+</ol>
+<h1><strong>Lista de categorías elegibles:</strong></h1><br>
+<ul>
+<li>Joyería de lujo (4196), Joyería de moda (10968), Joyería vintage y antigua (262024), Joyería de compromiso y bodas (91427), Joyería para hombre (10290), Bolsos y carteras para mujer (169291), Relojes, Partes y accesorios (260324).</li>
+</ul>
+<h1><strong>Lista de países elegibles para el envío:</strong></h1> <br>
+<p>Albania, Argelia, Andorra, Angola, Anguila, Antigua y Barbuda, Argentina, Armenia, Aruba, República de Azerbaiyán, Bahamas, Baréin, Bangladesh, Barbados, Belice, Benín, Bermudas, Bolivia, Bosnia y Herzegovina, Botsuana, Brasil, Islas Vírgenes Británicas, Brunéi Darusalam, Bulgaria, Burkina Faso, Burundi, Camboya, Camerún, Cabo Verde, Islas Caimán, República Centroafricana, Chad, Chile, Colombia, Comoras, Costa Rica, Costa de Marfil, Chipre, República Checa, República Democrática del Congo, Dinamarca, Yibuti, Dominica, República Dominicana, Ecuador, Egipto, El Salvador, Guinea Ecuatorial, Eritrea, Estonia, Etiopía, Islas Malvinas, Fiyi, Finlandia, Guayana Francesa, República Gabonesa, Gambia, Georgia, Ghana, Gibraltar, Grecia, Groenlandia, Granada, Guadalupe, Guatemala, Guernsey, Guinea, Guinea-Bisáu, Guyana, Haití, Honduras, Hungría, Islandia, India, Indonesia, Jamaica, Japón, Jersey, Jordania, Kenia, Kuwait, Kirguistán, Laos, Letonia, Líbano, Lesoto, Liberia, Libia, Liechtenstein, Lituania, Luxemburgo, Macedonia, Madagascar, Malaui, Malasia, Maldivas, Mali, Malta, Martinica, Mauritania, Mauricio, Mayotte, México, Moldavia, Mónaco, Mongolia, Montenegro, Montserrat, Marruecos, Mozambique, Namibia, Antillas Neerlandesas, Nueva Caledonia, Nueva Zelanda, Nicaragua, Níger, Nigeria, Noruega, Omán, Pakistán, Panamá, Paraguay, Perú, Filipinas, Portugal, Puerto Rico, Catar, República de Sudán, República del Congo, República de Croacia, República de la Unión de Myanmar (Birmania), Reunión, Rumanía, Ruanda, San Cristóbal y Nieves, San Pedro y Miquelón, San Vicente y las Granadinas, San Marino, Arabia Saudí, Senegal, Serbia, Seychelles, Sierra Leona, Singapur, Eslovaquia, Eslovenia, Somalia, Sudáfrica, Corea del Sur, Sri Lanka, Surinam, Svalbard, Suazilandia, Suecia, Taiwán, Tayikistán, Tanzania, Tailandia, Togo, Trinidad y Tobago, Túnez, Turquía, Turkmenistán, Turcas y Caicos, Uganda, Emiratos Árabes Unidos, Uruguay, Uzbekistán, Venezuela, Vietnam, Islas Vírgenes (EE.UU.), Sáhara Occidental, Yemen, Zambia, Zimbabue.</p>
+
+<h1><strong id="Portugues">Português</strong></h1>
+<h1><strong>Como usar o seu cupão:</strong></h1>
+<ol>
+<li>Compre jóias, malas e relógios acima de $300.</li>
+<li>Introduza o código do cupão LOVE25LUX no campo indicado.</li>
+<li>Pague o seu artigo até às 23:59 GMT-6 de 18 de fevereiro de 2025.</li>
+</ol>
+<h1><strong>Termos & Condições adicionais do cupão:</strong></h1>
+<ol>
+<li>O cupão só é válido no ebay.com</li>
+<li>O cupão pode ser utilizado para obter 15% de desconto no preço de compra de um artigo elegível numa única transação. É necessária uma compra mínima de $300 de um único artigo elegível, o desconto máximo é de $100.</li>
+<li> O cupão pode ser utilizado no máximo 3 vezes por conta eBay e é válido entre as 09:00:00 GMT-6 de 4 de fevereiro de 2025 e as 23:59:59 GMT-6 de 18 de fevereiro de 2025, ou enquanto durarem os stocks.</li>
+<li>O desconto aplica-se ao preço de compra (excluindo envio, processamento e impostos) de artigos elegíveis nas categorias Malas e Bolsas de Senhora, Relógios, Peças e Acessórios, Jóias Finas, Jóias de Moda, Jóias de Noivado e Casamento, Jóias de Homem e/ou Jóias Vintage e Antigas compradas no eBay.com.</li>
+<li>O endereço de envio do utilizador tem de estar localizado num dos países de envio elegíveis indicados abaixo.</li>
+<li>A utilização do cupão depende da disponibilidade e, como tal, pode ser revogada em qualquer altura sem aviso prévio e à discrição exclusiva do eBay.</li>
+<li>Qualquer diferença não utilizada entre o montante do desconto, tal como indicado no Cupão, e o montante das taxas de envio numa única transação (ou carrinho de compras) será anulada.</li>
+<li>O Cupão está sujeito às leis do Estado da Califórnia, Estados Unidos da América, é nulo onde for proibido, não pode ser trocado por dinheiro, não tem valor nominal e não pode ser combinado com qualquer outro Cupão, Cartão de Oferta ou Certificado de Oferta. O eBay pode cancelar, alterar ou revogar o Cupão em qualquer altura.</li>
+</ol>
+<h1><strong>Categorias elegíveis:</strong></h1>
+<ul>
+<li>Jóias Finas (4196), Jóias de Moda (10968), Jóias Vintage & Antigas (262024), Jóias de Casamento & Noivado (91427), Jóias de Homem (10290), Malas & Bolsas de Senhora (169291), Relógios, Peças & Acessórios (260324).</li></ul>
+<h1><strong>Países elegíveis para envio:</strong></h1>
+<p>Albânia, Argélia, Andorra, Angola, Anguila, Antígua e Barbuda, Argentina, Arménia, Aruba, República do Azerbaijão, Bahamas, Barém, Bangladesh, Barbados, Belize, Benim, Bermudas, Bolívia, Bósnia e Herzegovina, Botsuana, Brasil, Ilhas Virgens Britânicas, Brunei Darussalam, Bulgária, Burquina Faso, Burundi, Camboja, Camarões, Ilhas de Cabo Verde, Ilhas Caimão, República Centro-Africana, Chade, Chile, Colômbia, Comores, Costa Rica, Costa do Marfim, Chipre, República Checa, República Democrática do Congo, Dinamarca, Djibuti, Domínica, República Dominicana, Equador, Egito, El Salvador, Guiné Equatorial, Eritreia, Estónia, Etiópia, Ilhas Falkland (Islas Malvinas), Fiji, Finlândia, Guiana Francesa, República do Gabão, Gâmbia, Geórgia, Gana, Gibraltar, Grécia, Gronelândia, Granada, Guadalupe, Guatemala, Guernsey, Guiné, Guiné-Bissau, Guiana, Haiti, Honduras, Hungria, Islândia, Índia, Indonésia, Jamaica, Japão, Jersey, Jordânia, Quénia, Kuwait, Quirguizistão, Laos, Letónia, Líbano, Lesoto, Libéria, Líbia, Liechtenstein, Lituânia, Luxemburgo, Macedónia, Madagáscar, Malawi, Malásia, Maldivas, Mali, Malta, Martinica, Mauritânia, Maurícia, Mayotte, México, Moldávia, Mónaco, Mongólia, Montenegro, Montserrat, Marrocos, Moçambique, Namíbia, Antilhas Neerlandesas, Nova Caledónia, Nova Zelândia, Nicarágua, Níger, Nigéria, Noruega, Omã, Paquistão, Panamá, Paraguai, Peru, Filipinas, Portugal, Porto Rico, Qatar, República do Sudão, República do Congo, República da Croácia, República da União de Myanmar (Birmânia), Reunião, Roménia, Ruanda, São Cristóvão-Nevis, São Pedro e Miquelon, São Vicente e Granadinas, São Marinho, Arábia Saudita, Senegal, Sérvia, Seychelles, Serra Leoa, Singapura, Eslováquia, Eslovénia, Somália, África do Sul, Coreia do Sul, Sri Lanka, Suriname, Svalbard, Suazilândia, Suécia, Taiwan, Tajiquistão, Tanzânia, Tailândia, Togo, Trinidad e Tobago, Tunísia, Turquia, Turquemenistão, Ilhas Turcas e Caicos, Uganda, Emirados Árabes Unidos, Uruguai, Uzbequistão, Venezuela, Vietname, Ilhas Virgens (EUA), Saara Ocidental, Iémen, Zâmbia, Zimbabué. </p>
+
+<h1><strong id="Portugues do Brasil">Português do Brasil</strong></h1>
+<h1><strong>Como resgatar seu cupom:</strong></h1>
+<ol>
+<li>Compre joias de luxo, bolsas e relógios acima de US$ 300.</li>
+<li>Digite o código do cupom LOVE25LUX no campo de resgate.</li>
+<li>Pague pelo seu item até 11:59 PM GMT-6 do dia 18 de fevereiro de 2025.</li>
+</ol>
+<h1><strong>Termos e condições adicionais do cupom:</strong></h1>
+<ol>
+<li>O cupom é válido somente no ebay.com
+<li>O cupom pode ser usado para um desconto de 15% sobre o preço de compra de um item elegível em uma única transação. Uma compra mínima de US$ 300 de um item elegível é necessária, e o desconto máximo é de US$ 100.</li>
+<li>O cupom pode ser usado no máximo 3 vezes por cada conta eBay e é válido a partir das 09:00:00 GMT-6 do dia 4 de fevereiro de 2025 até 23:59:59 GMT-6 de 18 de fevereiro de 2025, ou enquanto durar o estoque.</li>
+<li>O desconto aplica-se ao preço de compra (excluindo envio, manuseio, impostos) de itens elegíveis nas categorias Bolsas e sacolas femininas, Relógios, Peças e acessórios, Joias finas, Joias da moda, Noivado e casamento, Joias masculinas e/ou Joias vintage e antigas adquiridas no eBay.com.</li>
+<li>O endereço de envio do usuário precisa estar localizado em um dos países de envio elegíveis listados </li>
+<li>O resgate de cupons depende da disponibilidade e, como tal, pode ser revogado a qualquer momento sem aviso prévio e a critério exclusivo do eBay. </li>
+<li>Qualquer diferença não utilizada entre o valor do desconto, conforme mostrado no cupom, e o valor das taxas de envio em uma única transação (ou carrinho) será perdida.</li>
+<li>O cupom está sujeito às leis do Estado da Califórnia, Estados Unidos da América, é inválido onde proibido, não resgatável por dinheiro, não tem valor facial e não pode ser combinado com qualquer outro cupom, cartão-presente ou certificado-presente. O eBay pode cancelar, alterar ou revogar o cupom a qualquer momento.</li>
+</ol>
+<h1><strong>Lista das categorias elegíveis:</strong></h1>
+<p>Joias finas (4196), Joias da moda (10968), Joias vintage e antigas (262024), Joias de noivado e casamento (91427), Joias masculinas (10290), Bolsas e sacolas femininas (169291), Relógios, Peças e acessórios (260324).
+Lista dos países de envio elegíveis:
+Albânia, Argélia, Andorra, Angola, Anguilla, Antígua e Barbuda, Argentina, Armênia, Aruba, República do Azerbaijão, Bahamas, Bahrein, Bangladesh, Barbados, Belize, Benin, Bermudas, Bolívia, Bósnia e Herzegovina, Botsuana, Brasil, Ilhas Virgens Britânicas, Brunei Darussalam, Bulgária, Burkina Faso, Burundi, Camboja, Camarões, Ilhas de Cabo Verde, Ilhas Cayman, República Centro-Africana, Chade, Chile, Colômbia, Comores, Costa Rica, Costa do Marfim, Chipre, República Tcheca, República Democrática do Congo, Dinamarca, Djibuti, Dominica, República Dominicana, Equador, Egito, El Salvador, Guiné Equatorial, Eritreia, Estônia, Etiópia, Ilhas Falkland (Islas Malvinas), Fiji, Finlândia, Guiana Francesa, República do Gabão, Gâmbia, Geórgia, Gana, Gibraltar, Grécia, Groenlândia, Granada, Guadalupe, Guatemala, Guernsey, Guiné, Guiné-Bissau, Guiana, Haiti, Honduras, Hungria, Islândia, Índia, Indonésia, Jamaica, Japão, Jersey, Jordan, Quênia, Kuwait, Quirguistão, Laos, Letônia, Líbano, Lesoto, Libéria, Líbia, Liechtenstein, Lituânia, Luxemburgo, Macedônia, Madagascar, Malawi, Malásia, Maldivas, Mali, Malta, Martinica, Mauritânia, Ilhas Maurício, Mayotte, México, Moldávia, Mônaco, Mongólia, Montenegro, Montserrat, Marrocos, Moçambique, Namíbia, Antilhas Holandesas, Nova Caledônia, Nova Zelândia, Nicarágua, Níger, Nigéria, Noruega, Omã, Paquistão, Panamá, Paraguai, Peru, Filipinas, Portugal, Porto Rico, Qatar, República do Sudão, República do Congo, República da Croácia, República da União de Myanmar (Birmânia), Reunião, Romênia, Ruanda, São Cristóvão-Nevis, São Pedro e Miquelon, São Vicente e Granadinas, San Marino, Arábia Saudita, Senegal, Sérvia, Seychelles, Serra Leoa, Cingapura, Eslováquia, Eslovênia, Somália, África do Sul, Coreia do Sul, Sri Lanka, Suriname, Svalbard, Suazilândia, Suécia, Taiwan, Tajiquistão, Tanzânia, Tailândia, Togo, Trinidad e Tobago, Tunísia, Turquia, Turcomenistão, Ilhas Turcas e Caicos, Uganda, Emirados Árabes Unidos, Uruguai, Uzbequistão, Venezuela, Vietnã, Ilhas Virgens (EUA), Saara Ocidental, Iêmen, Zâmbia, Zimbábue.</p>
+</article>
+<footer class="foot mt-5 mb-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="list-unstyled">
+                    About eBay
+                    Announcements
+                    Community
+                    Security 
+                    CenterSeller
+                    CenterPolicies
+                    Affiliates
+                    Help & Contact
+                    Site Map
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span>Copyright © 1995-2025 eBay Inc. All Rights Reserved. <a href="">Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice </a></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

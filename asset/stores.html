@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store HUB | eBay</title>
+    <link rel="Icon" href="https://pages.ebay.com/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         /* Custom styles */
+         #navbar1 .align-items-center{
+            margin-left:-130px;
+        }
+        #navbar1 .align-items-center a{
+            padding: 3px;
+        }
+        
+     
+        .navbar-brand img {
+            max-height: 200px;
+            mix-blend-mode:normal;
+            margin-top: -26px;
+        }
+        
+        .search-container {
+            flex: 1;
+            margin: 0 auto;
+        }
+        #searchbar{
+            margin-left: -200px;
+            border:3px solid black;
+            border-radius: 40px;
+            height: 50px;
+        }
+        .btn-primary{
+            width:80px;
+        }
+        @media (min-width: 992px) {
+            .mobile-search-container {
+                display: none;
+            }
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 991px) {
+            .desktop-elements {
+                display: none;
+            }
+
+            .mobile-search-container {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .mobile-search-container .form-control {
+                flex-grow: 1;
+                margin-right: 10px;
+            }
+
+            .mobile-search-container .navbar-brand img {
+                max-height: 40px;
+            }
+        }
+
+        /* Desktop Layout Specific Styles */
+        .desktop-search-container .input-group {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .desktop-search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        /* Some additional styling for better appearance */
+        .search-container a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .link{
+            color: black;
+        }
+        .side p{
+            font-size: larger;
+            word-spacing: 2px;
+            margin: 10px;
+        }
+        .side li{
+            margin: 10px;
+            font-size: large;
+        }
+        .side li:hover{
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
+        .side button{
+            font-size: large;
+            margin: 10px;
+        }
+        #advance{
+            margin-left: 20px;
+        }
+        #srhb{
+            border-radius: 50px;
+            padding: 15px;
+        }
+       
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  py-2" id="navbar1">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="mr-2">Hi!</span>
+                <a href="./signin.html" class="btn btn-link p-0">Sign in</a>
+                <span class="mx-1">or</span>
+                <a href="./register.html" class="btn btn-link p-0">Register</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Daily Deals</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Brand Outlet</a>
+                <span class="mx-1"></span>
+                <a class="link" href="#">Help & Contact</a>
+            </div>
+            
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#topNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse " id="topNav">
+                <ul class="navbar-nav ml-5">
+                    <li  class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                    <li   class="nav-item"><a class="nav-link" href="#">Watchlist</a></li>
+                    <li   class="nav-item"><a class="nav-link" href="#">My eBay</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="container-fluid">
+            <!-- Desktop Navbar -->
+            <div class="desktop-elements w-100 d-none d-lg-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="./ebaylogo.png" alt="eBay Logo" style="max-width: 140px;">
+                </a>
+                
+                <div class="dropdown mx-3">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown">
+                        Shop by Category
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Fashion</a>
+                        <a class="dropdown-item" href="#">Home & Garden</a>
+                        <a class="dropdown-item" href="#">Sports</a>
+                        <a class="dropdown-item" href="#">Toys</a>
+                    </div>
+                </div>
+    
+                <div class="desktop-search-container flex-grow-1">
+                    <div class="input-group">
+                        <input type="text" id="searchbar" class="form-control w-50" placeholder="Search for anything">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                All Categories
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./smartphone.html">Electronics</a>
+                                <a class="dropdown-item" href="#">Fashion</a>
+                                <a class="dropdown-item" href="#">Home & Garden</a>
+                                <a class="dropdown-item" href="#">Sports</a>
+                                <a class="dropdown-item" href="#">Toys</a>
+                            </div>
+                        </div>
+                        <button id="srhb" class="btn btn-primary w-25">Search</button>
+                        <a id="advance" href="#" class="align-self-center">Advanced</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Mobile Navbar -->
+            <div class="mobile-search-container w-100 d-lg-none">
+                <a class="navbar-brand" href="#">
+                    <img src="./ebaylogo.png" alt="eBay Logo">
+                </a>
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="btn btn-primary">
+                    <i class="fas fa-search "></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+            <section class="side">
+            <div class="row">
+                <h1><strong>Stores HUB</strong></h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-2">
+                    <ul class="list-unstyled">
+                    <strong><p>Shopping Resources</p></strong>
+                    <li>Find a Store</li><hr>
+                    <ul class="list-unstyled">
+                        <strong><p>Shop by Category</p></strong>
+                        <li> Medical Carts & Stands</li>
+                    </ul>  
+                </ul><hr>
+                <ul class="list-unstyled">
+                    <strong><li>Seller Help</li></strong>
+                    <li>Seller Hub</li>
+                    <li>Seller Center</li>
+                    <li>List an Item</li>
+                </ul><hr>
+                <ul class="list-unstyled">
+                    <strong><li>Seller Help</li></strong>
+                    <li>Seller Hub</li>
+                    <li>Seller Center</li>
+                    <li>List an Item</li>
+                </ul><hr>
+                <ul class="list-unstyled">
+                    <strong><li>Tech</li></strong>
+                    <li>Gadgets and Accesories</li>
+                    <li> Videogames</li>
+                    <li> Cellphones and Accesories</li>
+                    <li>ameras and Photo</li>
+                    <li>Audio and Headphones</li>
+                </ul><hr>
+                <ul class="list-unstyled">
+                    <strong>Health & Beauty</strong>
+                    <li>Facial & Hair Care</li>
+                    <li> Health and Beauty</li>
+                    <li> Hair Care</li>
+                    <li>Skin Care</li>
+                    <li>Health Care</li>
+                    <li>Nail Care</li>
+                </ul><hr>
+                <ul class="list-unstyled">
+                    <strong>Home & Garden</strong>
+                    <li>Home Décor</li>
+                    <li>Interior Design</li>
+                    <li>Household Supplies</li>
+                    <li>Home Improvement</li>
+                </ul><hr>
+                <ul class="list-unstyled">
+                    <strong>Toys</strong>
+                        <li>Toys and Hobbies</li>
+                </ul><hr>
+                </div>
+                <div class="col-md-10">
+                    <p><strong>Discover top stores & great resources</strong><br>
+                        The eBay Stores Hub is a handy, convenient doorway to explore some of the best that eBay has to offer. Here you can shop top sellers, even choosing a category and find out which brands, deals and special offers other customers are already searching for. Meanwhile, sellers can access a range of resources to help them get the most out of their eBay experience.</p>
+                        <div class="col-md-10">
+                            <p ><strong>Leading stores and the latest products</strong><br>
+                                Begin your shopping in style on eBay. Discover trending brands and top products to inspire your next purchase, whether it’s a phone, slow cooker, shirt or skirt. You’ll also find a variety of just-released models and looks to keep you in-the-know and one step ahead of the curve. It’s all on offer right here on eBay and can be yours in just a few clicks.</p>
+                        </div>
+                        <div class="col-md-10">
+                            <p ><strong>Shop categories, shop deals</strong><br>
+                                Pick a category and begin browsing to get the inspiration flowing and find the gift, treat or product that checks all your boxes. Jump into the latest <a href="">electronics</a>, pick up something for your <a href="">home and garden</a>, try new hobbies, get a cool new car accessory, or shop a huge range of <a href="">fashion</a> for a new outfit. Whatever you’re searching for, get started today on Stores Hub! <br>
+        
+                                  For a fun new way to shop online, check out the eBay Stores Hub today.</p><br><hr>
+                        </div>
+                        <div class="col-md-10">
+                            <strong>Related search</strong><br>
+
+                            <button class="btn btn-light">Seller Hub</button>
+                            <button class="btn btn-light">ubcap Stores</button>
+                            <button class="btn btn-light">Auto Hub Shop</button>
+                            <button class="btn btn-light">Plastic Hub</button>
+                            <button class="btn btn-light">Wheel Hub</button>
+                            <button class="btn btn-light">Hard Drive Hub</button>
+                            <button class="btn btn-light"> Star Hub</button>
+                            <button class="btn btn-light"> Hub Us</button>
+                            <button class="btn btn-light"> Hub HDD</button>
+                            <button class="btn btn-light"> Square HubBest</button>
+                            <button class="btn btn-light"> HubE-Commerce Store</button> 
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="foot mt-5 mb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="list-unstyled">
+                        About eBay
+                        Announcements
+                        Community
+                        Security 
+                        CenterSeller
+                        CenterPolicies
+                        Affiliates
+                        Help & Contact
+                        Site Map
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <span>Copyright © 1995-2025 eBay Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Consumer Health Data, Payments Terms of Use, Cookies, CA Privacy Notice, Your Privacy Choices and AdChoice </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
